@@ -1,7 +1,9 @@
 Slack Doorbell
 ==============
 
-Get a Slack notification when someone is rings the doorbell.
+Get a Slack notification when someone rings the doorbell.
+
+[See it in action!](https://www.youtube.com/watch?v=91ABZbnGqrY).
 
 ## Requirements
 
