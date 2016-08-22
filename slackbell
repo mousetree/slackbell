@@ -1,0 +1,29 @@
+#!/bin/bash
+# /etc/init.d/slackbell
+
+### BEGIN INIT INFO
+# Provides:          slackbell
+# Required-Start:    $remote_fs $syslog
+# Required-Stop:     $remote_fs $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Slackbell
+# Description:       Slackbell
+### END INIT INFO
+
+case "$1" in 
+    start)
+        echo "Starting slackbell"
+        python /home/pi/slackbell/slackbell.py &
+        ;;
+    stop)
+        echo "Stopping slackbell"
+        killall slackbell
+        ;;
+    *)
+        echo "Usage: /etc/init.d/slackbell start|stop"
+        exit 1
+        ;;
+esac
+
+exit 0
